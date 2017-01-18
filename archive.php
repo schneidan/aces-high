@@ -3,7 +3,10 @@
 	<div class="span-18">
 		<div id="content">	
 
-		<?php if (have_posts()) : ?>
+		<?php
+		global $query_string;
+		query_posts( $query_string.'&order=ASC' );
+		if (have_posts()) : ?>
 
  	  <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
  	  <?php /* If this is a category archive */ if (is_category()) { ?>

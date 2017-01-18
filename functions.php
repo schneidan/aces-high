@@ -103,19 +103,9 @@ if ( function_exists('register_sidebar') ) {
         'before_title' => '<h2 class="widgettitle">',
         'after_title' => '</h2>',
     ));
-    
-    register_sidebar(
-	array(
-		'id' => 'sidebar-2',
-    	'name' => 'Sidebar 2',
-		'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h2 class="widgettitle">',
-        'after_title' => '</h2>',
-    ));
 }
 
-$themename = "GamesMania";
+$themename = "Aces High";
 $shortname = str_replace(' ', '_', strtolower($themename));
 
 function get_theme_option($option)
@@ -274,10 +264,17 @@ https://flexithemes.com/wp-content/pro/b125-4.gif, https://flexithemes.com/wp-co
 	
 );
 
- function ahjw_add_page_break_button( $buttons, $id ){
+// add a favicon to the site
+function blog_favicon() {
+    echo '<link rel="Shortcut Icon" href="'.get_bloginfo('stylesheet_directory').'/images/favicon.ico?v=2" />' . "\n";
+}
+add_action('wp_head', 'blog_favicon');
+
+function ahjw_add_page_break_button( $buttons, $id ){
     if ( 'content' != $id )
         return $buttons;
     array_splice( $buttons, 13, 0, 'wp_page' );
+    array_splice( $buttons, 15, 0, 'hr' );
     return $buttons;
 }
 add_filter( 'mce_buttons', 'ahjw_add_page_break_button', 1, 2 );

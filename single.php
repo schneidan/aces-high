@@ -22,8 +22,8 @@
 							<div class="postmeta">This post is <?php if(get_the_tags()) { the_tags('', ', '); } ?> in <?php the_category(', ') ?></div>
 						
 							<div class="navigation clearfix">
-								<div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
-								<div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
+								<div class="alignleft"><?php previous_post_link('%link', '&laquo; Next Part') ?></div>
+								<div class="alignright"><?php next_post_link('%link', 'Last Part &raquo;') ?></div>
 							</div>
 	
 							<?php edit_post_link('Edit this entry','','.'); ?>
