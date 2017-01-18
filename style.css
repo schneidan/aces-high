@@ -368,6 +368,12 @@ blockquote {
 .post img.alignright {
 	margin:0 0 1em 1em;
 }
+.post img.aligncenter.size-full {
+	width: 100%;
+	}
+.post img.aligncenter.size-medium {
+	width: 50%;
+	}
 body.archive .post img {
 	width: 30%;
 	margin: 0 1em .5em 0;
@@ -383,8 +389,7 @@ img.wp-smiley {
 .aligncenter,
 div.aligncenter {
    display: block;
-   margin-left: auto;
-   margin-right: auto;
+   margin:1em auto;
 	}
 
 .alignleft {
@@ -902,6 +907,9 @@ div.aligncenter {
 		}
 	.post img.size-thumbnail {
 		width: 30%;
+		}
+	.post img.aligncenter.size-medium {
+		width: 100%;
 		}
     
     .sidebar {
