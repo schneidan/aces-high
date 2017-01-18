@@ -350,10 +350,24 @@ blockquote {
 	border-left: 3px solid #2d7785;
 	}
 	
-.post img {
+.post img.size-full {
 	width: 100%;
 	}
-
+.post img.size-large {
+	width: 60%;
+	}
+.post img.size-medium {
+	width: 40%;
+	}
+.post img.size-thumbnail {
+	width: 25%;
+	}
+.post img.alignleft {
+	margin:0 1em 1em 0;
+}
+.post img.alignright {
+	margin:0 0 1em 1em;
+}
 body.archive .post img {
 	width: 30%;
 	margin: 0 1em .5em 0;
@@ -880,6 +894,15 @@ div.aligncenter {
         margin-left: 0;
         margin-right: 0;
     }
+	.post img.size-large {
+		width: 100%;
+		}
+	.post img.size-medium {
+		width: 50%;
+		}
+	.post img.size-thumbnail {
+		width: 30%;
+		}
     
     .sidebar {
         
@@ -923,6 +946,12 @@ div.aligncenter {
     .logoimg {
 	    max-width:100%!important;
     }
+	.post img.size-medium {
+		width: 100%;
+		}
+	.post img.size-thumbnail {
+		width: 45%;
+		}
 }
 
 /* Some General Formattings ----------- */
